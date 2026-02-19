@@ -1,1 +1,42 @@
 @import "tailwindcss";
+@layer base, utilities;
+
+@theme {
+    /* Primary Palette */
+    --primary-light: #F93943;
+    --accent-light: #F9AF39;
+    
+    /* Secondary Palette */
+    --primary-light-muted: #FA757C;
+    --accent-light-muted: #FBC774;
+    
+    /* Light Theme Colors */
+    --background-light: #F2FDFF;
+    --background-light-darkened: #C2F6FF;
+
+    /* Dark Theme Colors */
+    --background-dark: #1A181B;
+    --background-dark-lightened: #343036;
+
+    /* Breakpoints */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 1024px;
+    --breakpoint-lg: 1280px;
+}
+
+@layer base {
+    html {
+        background-color: var(--background-light);
+    }
+}
+
+@layer utilities {
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
