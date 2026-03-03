@@ -1,4 +1,4 @@
-import { links } from '../vars.ts';
+import { links } from '../data/vars.ts';
 const main = document.getElementById('main');
 const hero = document.getElementById('hero');
 const tabs = document.getElementById('tabs');
@@ -19,10 +19,6 @@ function slideContent(slidePos) {
         });
     }
 }
-
-tabs.addEventListener('click', () => {
-    slideContent((curPos + 1) % tabs.childElementCount);
-});
 
 tabs.addEventListener("wheel", (e) => {
     if (main.scrollTop < window.innerHeight) return; // If hero is still in view, scroll normally

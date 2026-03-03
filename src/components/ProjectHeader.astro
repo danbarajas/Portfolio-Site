@@ -1,0 +1,16 @@
+---
+interface Props {
+    title: string;
+    subtitle: string;
+    projectIdx: number;
+}
+const { title, subtitle, projectIdx } = Astro.props;
+---
+
+<div class="flex flex-col justify-center place-items-center grow">
+    <span class="project-btn hover:cursor-pointer hover:not-[:is(.active-project)]:border-[var(--primary-light-muted)] w-fit pt-3 px-5 border-t-5 border-transparent transition-colors"
+            data-project-id={projectIdx}>
+        <h1 class="text-3xl font-bold mb-1">{title}</h1>
+        <h2 class="text-lg">{subtitle}</h2>
+    </span>
+</div>

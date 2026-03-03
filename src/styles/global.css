@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@layer base, utilities;
+@layer base, components, utilities;
 
 @theme {
     /* Primary Palette */
@@ -30,6 +30,40 @@
     }
 }
 
+@layer components {
+    #thumbContainer {
+        box-shadow: 0 0 transparent;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    #thumbContainer:hover {
+        box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #thumbContainer::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 2rem;
+        box-shadow: inset 0 0 12px 6px rgba(0, 0, 0, 0.75), 0 0 transparent;
+        transition: box-shadow 0.2s ease-in-out;
+        pointer-events: none;
+    }
+
+    #thumbContainer:hover::after {
+        box-shadow: inset 0 0 transparent;
+    }
+
+    #projectDesc {
+        transition: box-shadow 0.2s ease-in-out;
+        box-shadow: inset 0 0 12px 6px rgba(0, 0, 0, 0.1), 0 0 transparent;
+    }
+
+    #projectDesc:hover {
+        box-shadow: inset 0 0 transparent, 0 0 12px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
 @layer utilities {
     .no-scrollbar {
         -ms-overflow-style: none;
@@ -38,5 +72,9 @@
 
     .no-scrollbar::-webkit-scrollbar {
         display: none;
+    }
+
+    .active-project {
+        border-color: var(--primary-light);
     }
 }
