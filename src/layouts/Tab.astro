@@ -1,0 +1,9 @@
+---
+interface Props {
+    class: string;
+}
+---
+
+<div class={Astro.props.class + " flex flex-col w-screen h-full snap-center snap-always"}>
+    <slot />
+</div>
