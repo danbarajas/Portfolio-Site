@@ -1,18 +1,26 @@
 ---
 import Tab from '../layouts/Tab.astro';
 import ProjectHeader from './ProjectHeader.astro';
-import { projects } from '../data/projects.js';
+import ProjectTag from './ProjectTag.jsx';
+import { projects } from '../data/projects.ts';
 ---
 
 <Tab class="bg-[var(--background-light)]">
-    <div class="flex gap-8 px-8 mt-24">
-        <div id="thumbContainer" class="relative bg-black w-1/2 aspect-video rounded-4xl overflow-hidden">
+    <div class="flex flex-col md:flex-row basis-3/4 md:basis-2/3 items-center md:items-end gap-8 py-8 md:py-0 px-8 min-h-0 max-w-full">
+        <div id="thumbContainer" class="relative basis-1/2 min-h-0 max-w-full aspect-video rounded-4xl overflow-hidden">
             <img id="projectThumbnail" class="size-full object-cover hover:scale-110 transition-transform duration-300 ease-in-out" src={`./src/assets/${projects[0].thumbnail}`} />
         </div>
-        <div id="projectDesc" class="w-1/2 aspect-video rounded-4xl p-4">{projects[0].description}</div>
+        <div id="descContainer" class="flex flex-col justify-between basis-1/2 min-h-0 max-w-full aspect-video rounded-4xl p-10">
+            <div id="projectDesc" class="overflow-auto">{projects[0].description}</div>
+            <div id="projectTags" class="flex flex-wrap gap-2 mt-4">
+                {projects[0].tags?.map((tag) => (
+                    <ProjectTag client:only tag={tag} />
+                ))}
+            </div>
+        </div>
     </div>
 
-    <div class="flex w-full text-center grow">
+    <div class="flex flex-wrap w-full text-center basis-1/4 md:basis-1/3 min-h-0 max-w-full">
         {projects.map((project, idx) => (
             <ProjectHeader title={project.title} subtitle={project.subtitle} projectIdx={idx} />
         ))}
