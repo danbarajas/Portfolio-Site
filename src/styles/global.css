@@ -54,12 +54,12 @@
         box-shadow: inset 0 0 transparent;
     }
 
-    #descContainer {
+    .popOutContainer {
         transition: box-shadow 0.2s ease-in-out;
         box-shadow: inset 0 0 12px 6px rgba(0, 0, 0, 0.1), 0 0 transparent;
     }
 
-    #descContainer:hover {
+    .popOutContainer:hover {
         box-shadow: inset 0 0 transparent, 0 0 12px 6px rgba(0, 0, 0, 0.1);
     }
 }
@@ -76,5 +76,12 @@
 
     .active-project {
         border-color: var(--primary-light);
+    }
+
+    .markRequired::after {
+        content: "*";
+        color: var(--primary-light);
+        margin-left: 0.2rem;
+        font-size: 90%;
     }
 }
