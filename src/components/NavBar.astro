@@ -2,14 +2,14 @@
 import { links } from '../data/vars';
 ---
 
-<nav class="fixed w-full z-50 text-white mix-blend-difference px-6 py-4 text-2xl font-bold hover:backdrop-blur-xs hover:shadow-2xl transition-all duration-200">
+<nav class="fixed w-full z-50 px-6 py-4 text-2xl font-bold hover:backdrop-blur-xs hover:shadow-2xl transition-all duration-200">
     <div class="flex items-center justify-between">
-        <h1 class="basis-1/2">Daniel Barajas</h1>
+        <h1 id="navTitle" class="hide-element text-(--primary-light) basis-1/2 transition-opacity duration-200">Daniel Barajas</h1>
 
         {links.map((link) => (
         <a
             id={link.id}
-            class="transition-colors duration-200 hover:text-red-500 cursor-pointer"
+            class="transition-colors duration-200 text-(--primary-light-muted) hover:text-red-500 cursor-pointer"
         >
             {link.name}
         </a>

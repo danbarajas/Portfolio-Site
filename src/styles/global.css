@@ -78,6 +78,15 @@
         border-color: var(--primary-light);
     }
 
+    .active-nav {
+        color: var(--primary-light);
+    }
+
+    .hide-element {
+        opacity: 0;
+        user-select: none;
+    }
+
     .markRequired::after {
         content: "*";
         color: var(--primary-light);
