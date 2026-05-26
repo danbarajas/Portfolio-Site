@@ -9,13 +9,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^5.0.3",
     "@tailwindcss/vite": "^4.1.13",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.1.5",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "@vercel/analytics": "^2.0.1",
+    "astro": "^6.3.7",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "resend": "^6.12.3",
     "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^5.0.5",
+    "@astrojs/vercel": "^10.0.7"
   }
 }
