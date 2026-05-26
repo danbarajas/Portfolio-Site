@@ -1,26 +1,12 @@
 ---
 import Tab from '../layouts/Tab.astro';
+import ContactForm from './ContactForm.jsx';
 ---
 
 <Tab class="bg-(--background-light)">
     <div class="grid grid-cols-3 grid-rows-5 w-1/2 gap-5">
-        <form class="popOutContainer grid grid-cols-2 col-span-full row-span-4 justify-between rounded-4xl p-10 gap-5">
-            <h1 class="col-span-full text-3xl font-bold text-center">Let's get in touch!</h1>
-            <div class="flex flex-col gap-2">
-                <label for="name" class="markRequired text-xl font-semibold">Name</label>
-                <input required id="name" name="name" type="text" placeholder="What should I call you?" class="rounded-lg p-3 border-2 border-gray-300 outline-none focus:border-transparent focus:ring-3 ring-(--accent-light) transition" />                
-            </div>
-            <div class="flex flex-col gap-2">
-                <label for="email" class="markRequired text-xl font-semibold">Email</label>
-                <input required id="email" name="email" type="email" placeholder="What's your email?" class="rounded-lg p-3 border-2 border-gray-300 outline-none focus:border-transparent focus:ring-3 ring-(--accent-light) transition" />
-            </div>
-            <div class="flex flex-col gap-2 col-span-full">
-                <label for="message" class="markRequired text-xl font-semibold">Message</label>
-                <textarea required id="message" name="message" placeholder="Write me a message!" rows="4" class="resize-none rounded-lg p-3 border-2 border-gray-300 outline-none focus:border-transparent focus:ring-3 ring-(--accent-light) transition"></textarea>
-            </div>
-            <button type="submit" class="col-span-full p-3 rounded-lg bg-(--primary-light) text-white font-bold cursor-pointer hover:bg-(--primary-light-muted) transition">Send Message</button>
-        </form>
-        <a href="./src/assets/Daniel Barajas Resume.pdf" target="_blank" class="flex items-center justify-center rounded-4xl text-2xl font-bold bg-[#dadada] text-[#b46020] select-none cursor-pointer hover:shadow-[0_2px_5px_2px] shadow-[#dadada]/60 hover:scale-105 hover:-translate-y-px transition-all">
+        <ContactForm client:load />
+        <a href="https://drive.google.com/file/d/1EFIBSgG7TiBcCf4Sa3F0sSIUVkHn2b8u/view?usp=sharing" target="_blank" class="flex items-center justify-center rounded-4xl text-2xl font-bold bg-[#dadada] text-[#b46020] select-none cursor-pointer hover:shadow-[0_2px_5px_2px] shadow-[#dadada]/60 hover:scale-105 hover:-translate-y-px transition-all">
             Resume
         </a>
         <a href="https://github.com/danbarajas" target="_blank" class="flex items-center justify-center rounded-4xl text-2xl font-bold bg-[#232925] text-[#F2F5F3] select-none cursor-pointer hover:shadow-[0_2px_5px_2px] shadow-[#232925]/60 hover:scale-105 hover:-translate-y-px transition-all">
