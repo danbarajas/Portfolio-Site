@@ -11,7 +11,7 @@ const tagsRoot = createRoot(projectTags);
 window.onload = () => {
     const img = new Image();
     projects.forEach((project) => {
-        img.src = `./src/assets/${project.thumbnail}`;
+        img.src = `/assets/${project.thumbnail}`;
     });
 };
 
@@ -25,7 +25,7 @@ projectBtns.forEach((btn) => {
             if (i != projectIdx) otherBtn.classList.remove("active-project");
         });
 
-        projectThumbnail.src = `./src/assets/${projects[projectIdx].thumbnail}`;
+        projectThumbnail.src = `/assets/${projects[projectIdx].thumbnail}`;
         projectDesc.innerHTML = projects[projectIdx].description;
         tagsRoot.render(
             <>

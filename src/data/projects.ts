@@ -17,7 +17,7 @@ export const projects = [
         title: 'TadPool',
         subtitle: 'Feb 2025',
         thumbnail: 'tadpool.png',
-        description: 'Built for the Small Biz, Big Impact track at SparkHacks 2025, a hackathon at UIC. TadPool is a web application that connects small business owners with other local small business owners in order to pool resources together in order to organize larger events provindg more publicity. Also allows customers to view nearby businesses and events providing more online exposure.',
+        description: 'Built for the Small Biz, Big Impact track at SparkHacks 2025, a hackathon at UIC. TadPool is a web application that connects small business owners with other local small business owners in order to pool resources together in order to organize larger events providing more publicity. Also allows customers to view nearby businesses and events providing more online exposure.',
         tags: ['React', 'JavaScript', 'Node.js']
     },
     {
