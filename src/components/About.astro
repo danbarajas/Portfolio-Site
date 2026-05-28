@@ -1,7 +1,41 @@
 ---
 import Tab from '../layouts/Tab.astro';
+import ProjectTag from './ProjectTag.jsx';
+import { frontendTags, backendTags, toolsTags } from '../data/vars.ts';
 ---
 
 <Tab class="bg-blue-500">
-    <h1>About</h1>
+    <img class="absolute -left-1/12 h-3/4 aspect-square rounded-full border-4 border-(--primary-light)" />
+
+    <div class="flex flex-col w-1/2 gap-5 ml-100">
+        <h1 class="font-bold text-4xl w-2/3 self-center text-center">Hi! I'm Daniel Barajas</h1>
+        <h2 class="text-lg w-2/3 self-center text-center">A computer scientist focused on functionality, creative design, user experience, and finding the delicate balance of all three.</h2>
+
+        <div class="grid grid-cols-2 gap-5">
+            <div class="popOutContainer flex flex-col gap-5 p-5">
+                <h3 class="text-lg font-semibold">Frontend</h3>
+                <div class="flex flex-wrap gap-2">
+                    {frontendTags.map((tag) => (
+                        <ProjectTag client:load tag={tag} />
+                    ))}
+                </div>
+            </div>
+            <div class="popOutContainer flex flex-col gap-5 p-5">
+                <h3 class="text-lg font-semibold">Backend</h3>
+                <div class="flex flex-wrap gap-2">
+                    {backendTags.map((tag) => (
+                        <ProjectTag client:load tag={tag} />
+                    ))}
+                </div>
+            </div>
+            <div class="popOutContainer flex flex-col gap-5 p-5">
+                <h3 class="text-lg font-semibold">Tools</h3>
+                <div class="flex flex-wrap gap-2">
+                    {toolsTags.map((tag) => (
+                        <ProjectTag client:load tag={tag} />
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
 </Tab>
