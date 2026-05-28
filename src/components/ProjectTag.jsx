@@ -118,7 +118,7 @@ function ProjectTag({ tag }) {
     };
 
     return (
-        <div className="text-sm md:text-base font-medium bg-(--main-color) text-(--sec-color) rounded-full px-2 py-0.5 select-none hover:shadow-[0_2px_5px_2px] shadow-(color:--main-color)/60 hover:scale-105 hover:-translate-y-px transition-all" 
+        <div className="text-sm md:text-base font-medium bg-(--main-color) text-(--sec-color) rounded-full px-3 pb-1 pt-0.5 leading-none select-none hover:shadow-[0_2px_5px_2px] shadow-(color:--main-color)/60 hover:scale-105 hover:-translate-y-px transition-all" 
                 style={style}>
             {tag}
         </div>

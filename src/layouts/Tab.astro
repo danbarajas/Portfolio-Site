@@ -1,9 +1,10 @@
 ---
 interface Props {
-    class: string;
+    id: string;
+    class?: string;
 }
 ---
 
-<section class={Astro.props.class + " flex flex-col place-items-center justify-center w-screen h-screen snap-center snap-always"}>
+<section id={Astro.props.id} class={Astro.props.class + " flex flex-col place-items-center justify-center w-screen h-screen snap-center snap-always"}>
     <slot />
 </section>

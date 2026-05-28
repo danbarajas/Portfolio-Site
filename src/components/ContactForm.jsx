@@ -23,7 +23,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="popOutContainer relative grid grid-cols-2 col-span-full row-span-4 justify-between rounded-4xl p-10 gap-5">
+    <form onSubmit={handleSubmit} className="popOutContainer relative grid grid-cols-2 col-span-full row-span-4 justify-between p-10 gap-5">
       <div className={`contents ${status === 'success' || status === 'error' ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'} transition-opacity duration-300`}>
         <h1 className="col-span-full text-3xl font-bold text-center">Let's get in touch!</h1>
         <div className="flex flex-col gap-2">
