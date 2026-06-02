@@ -42,10 +42,10 @@
     #projectsTab {
         background-color: var(--background-light);
         background-image: linear-gradient(135deg,
-            color-mix(in srgb, var(--accent-light) 7%, var(--background-light)) 0%,
-            color-mix(in srgb, var(--accent-light-muted) 12%, var(--background-light)) 20%,
-            color-mix(in srgb, var(--accent-light-muted) 7%, var(--background-light)) 60%,
-            var(--background-light) 100%
+            var(--background-light) 0%,
+            color-mix(in srgb, var(--accent-light) 7%, var(--background-light)) 20%,
+            color-mix(in srgb, var(--accent-light-muted) 12%, var(--background-light)) 60%,
+            color-mix(in srgb, var(--background-light-darkened) 12%, var(--background-light)) 100%
         );
     }
 
