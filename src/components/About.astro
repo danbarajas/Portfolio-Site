@@ -1,7 +1,7 @@
 ---
 import Tab from '../layouts/Tab.astro';
 import ProjectTag from './ProjectTag.jsx';
-import { frontendTags, backendTags, toolsTags } from '../data/vars.ts';
+import { tagCats, tags } from '../data/vars.ts';
 ---
 
 <Tab id="aboutTab">
@@ -12,30 +12,16 @@ import { frontendTags, backendTags, toolsTags } from '../data/vars.ts';
         <h2 class="text-lg w-2/3 self-center text-center">A computer scientist focused on functionality, creative design, user experience, and finding the delicate balance of all three.</h2>
 
         <div class="grid grid-cols-2 gap-5">
-            <div class="popOutContainer flex flex-col gap-5 p-5">
-                <h3 class="text-lg font-semibold">Frontend</h3>
-                <div class="flex flex-wrap gap-2">
-                    {frontendTags.map((tag) => (
-                        <ProjectTag client:load tag={tag} />
-                    ))}
+            {tagCats.map((cat) => (
+                <div class="popOutContainer flex flex-col gap-5 p-5">
+                    <h3 class="text-lg font-semibold">{cat.name}</h3>
+                    <div class="flex flex-wrap gap-2">
+                        {tags.filter((t) => t.category === cat.category).map((t) => (
+                            <ProjectTag client:load tag={t.name} />
+                        ))}
+                    </div>
                 </div>
-            </div>
-            <div class="popOutContainer flex flex-col gap-5 p-5">
-                <h3 class="text-lg font-semibold">Backend</h3>
-                <div class="flex flex-wrap gap-2">
-                    {backendTags.map((tag) => (
-                        <ProjectTag client:load tag={tag} />
-                    ))}
-                </div>
-            </div>
-            <div class="popOutContainer flex flex-col gap-5 p-5">
-                <h3 class="text-lg font-semibold">Tools</h3>
-                <div class="flex flex-wrap gap-2">
-                    {toolsTags.map((tag) => (
-                        <ProjectTag client:load tag={tag} />
-                    ))}
-                </div>
-            </div>
+            ))}
         </div>
     </div>
 </Tab>

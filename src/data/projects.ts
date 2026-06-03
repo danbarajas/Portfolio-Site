@@ -25,6 +25,6 @@ export const projects = [
         subtitle: 'Mar 2020',
         thumbnail: 'projectcentral.png',
         description: 'A labor of love project, Project Central is a full-stack web application made to store my various projects in one place. Being one of my earliest large-scale projects, it was very exploratory and allowed me to teach myself advanced web development concepts, such as backend development, databases, site deployment, and more. Concepts were added as I learned them, so the site evolved much over time, from a simple static website to the dynamic full-stack application it is now.',
-        tags: ['JavaScript', 'SQL', 'PHP']
+        tags: ['JavaScript', 'MySQL', 'PHP']
     },
 ];
